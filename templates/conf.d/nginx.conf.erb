@@ -1,7 +1,7 @@
 
 user <%= @options['daemon_user'] %>;
 worker_processes <%= @options['worker_processes'] %>;
-
+worker_rlimit_nofile <%= @options['worker_rlimit_nofile'] %>;
 error_log  <%= @options['logdir'] %>/error.log;
 pid        <%= @options['pid'] %>;
 

@@ -16,16 +16,17 @@
 class nginx::params {
 
   $defaults = {
-    temp_dir                => '/tmp',
-    run_dir                 => '/var/nginx',
-    conf_dir                => '/etc/nginx',
-    confd_purge             => false,
-    worker_processes        => 1,
-    worker_connections      => 1024,
-    types_hash_max_size     => 1024,
-    types_hash_bucket_size  => 512,
-    names_hash_bucket_size  => 64,
-    multi_accept            => off,
+    temp_dir               => '/tmp',
+    run_dir                => '/var/nginx',
+    conf_dir               => '/etc/nginx',
+    confd_purge            => false,
+    worker_processes       => 1,
+    worker_connections     => 1024,
+    worker_rlimit_nofile   => 1024,
+    types_hash_max_size    => 1024,
+    types_hash_bucket_size => 512,
+    names_hash_bucket_size => 64,
+    multi_accept           => off,
 
     # One of [kqueue|rtsig|epoll|/dev/poll|select|poll|eventport] or
     # false to use OS default
