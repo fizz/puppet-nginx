@@ -13,8 +13,8 @@ events {
 
 http {
   include       /etc/nginx/mime.types;
-  default_type  <%= @default_type %>;
-  charset <%= @charset %>;
+  default_type  <%= @options['default_type'] %>;
+  charset <%= @options['charset'] %>;
 
   access_log  <%= @options['logdir'] %>/access.log;
 
