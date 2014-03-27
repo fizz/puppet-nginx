@@ -36,6 +36,7 @@ http {
   gzip_disable <%= @options['gzip_disable'] %>;
   gzip_min_length <%= @options['gzip_min_length'] %>;
   gzip_comp_level <%= @options['gzip_comp_level'] %>;
+  gzip_proxied <%= @options['gzip_proxied'] %>;
   gzip_vary <%= @options['gzip_vary'] %>;
   gzip_types <%= @options['gzip_types'] %>;
 <% end -%>
