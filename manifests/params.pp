@@ -23,6 +23,8 @@ class nginx::params {
     worker_processes       => 1,
     worker_connections     => 1024,
     worker_rlimit_nofile   => 1024,
+    default_type           => 'text/html',
+    charset                => 'UTF-8',
     types_hash_max_size    => 1024,
     types_hash_bucket_size => 512,
     names_hash_bucket_size => 64,

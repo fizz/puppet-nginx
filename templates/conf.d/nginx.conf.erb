@@ -13,7 +13,8 @@ events {
 
 http {
   include       /etc/nginx/mime.types;
-  default_type  application/octet-stream;
+  default_type  <%= @default_type %>;
+  charset <%= @charset %>;
 
   access_log  <%= @options['logdir'] %>/access.log;
 
